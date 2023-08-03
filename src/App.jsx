@@ -1,12 +1,10 @@
-import NavBar from "./components/NavBar.jsx"
-
-
+import Home from "./components/Home/Home"
 
 function App() {
 
   return (
     <>
-      <NavBar/> 
+      <Home />
     </>
   )
 }

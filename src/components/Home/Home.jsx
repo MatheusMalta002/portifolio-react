@@ -1,7 +1,7 @@
 import React from 'react'
 import Social_Icons from './Social_Icons/Social_Icons'
 import Typewriter from 'typewriter-effect'
-import image from '../../assets/image.png'
+import image from '../../assets/image2.png'
 import { motion } from 'framer-motion'
 
 
@@ -24,13 +24,13 @@ function Home() {
 
                         <h1 className='py-4 flex'>
                             <span className='text-white uppercase font-bold text-5xl flex-wrap '>
-                                MATHEUS MALTA
+                                MATHEUS <span>MALTA</span>
                             </span>
                         </h1>
 
                         <h1 className=' text-white text-4xl flex text-center font-bold mt-4'>
                             I am a 
-                            <span className='text-[#a1ade9] font-bold  flex items-center pl-3'>
+                            <span className='text-[#fffc4e] font-bold  flex items-center pl-3'>
                                 <Typewriter
                                     options={{
                                         strings: ['Developer', 'Student'],

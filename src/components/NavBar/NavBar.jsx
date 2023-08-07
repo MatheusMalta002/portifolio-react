@@ -13,7 +13,7 @@ function Navbar(){
     shadow-xl text-gray-400 flex items-center justify-between px-4 z-50">  
       <div>
         <h1 className='flex items-center uppercase font-bold' >
-          <FaReact className='w-[40px] h-[40px] pr-2 text-[#7982b9]' />
+          <FaReact className='w-[40px] h-[40px] pr-2 text-[#fffc4e]' />
           Portifolio
         </h1>
       </div>

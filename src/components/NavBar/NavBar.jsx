@@ -9,7 +9,8 @@ function Navbar(){
 
   return (
 
-    <div className="navbar h-20 fixed top-0 left-0 w-full bg-[#2e2e2e] shadow-xl text-gray-400 flex items-center justify-between px-4 z-50">  
+    <div className="navbar h-20 fixed top-0 left-0 w-full bg-[#2e2e2e] 
+    shadow-xl text-gray-400 flex items-center justify-between px-4 z-50">  
       <div>
         <h1 className='flex items-center uppercase font-bold' >
           <FaReact className='w-[40px] h-[40px] pr-2 text-[#7982b9]' />

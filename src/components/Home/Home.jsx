@@ -14,11 +14,11 @@ function Home() {
             <Social_Icons />
             {/* main container */}
             <motion.div className='flex justify-center items-center flex-row w-full ml-[40px] mr-[40px]'
-                initial={{opacity:0, y:100}}
-                animate={{opacity:1, y:0}}
-                transition={{duration: "1"}}>
+                initial={{opacity:0, x:-100}}
+                animate={{opacity:1, x:0}}
+                transition={{duration: "1"}} >
 
-                <div className=' w-full flex flex-col items-start justify-center text-gray-800 '>
+                <div className='flex flex-col items-start justify-center text-gray-800 '>
                     <h1 className='py-4 flex'>
                         <span className='uppercase  text-5xl flex-wrap  '>
                             MATHEUS <span>MALTA</span>
@@ -48,10 +48,10 @@ function Home() {
                         </button>
                     </div>
                 </div>
-
-                <div className='hidden md:flex h-full  flex-col items-center justify-center'>
-                    <div className=' w-[250px] h-[250px] rounded-full flex justify-center items-center overflow-hidden border-6 border-gray-800  '>
-                        <img src={image} alt="photo" className='object-cover h-full w-full' />
+                <div className='hidden md:flex h-full  flex-col items-center justify-center'> 
+                    <div className=' w-[250px] h-[250px] rounded-full flex p-3 border-2 border-gray-800
+                     justify-center items-center overflow-hidden '>
+                        <img src={image} alt="photo" className='object-cover h-full w-full rounded-full' />
                     </div>
                 </div>
             </motion.div>

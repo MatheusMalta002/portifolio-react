@@ -6,14 +6,19 @@ import { FaBars, FaDev, FaTimes} from 'react-icons/fa';
 function Navbar(){
 
   const [nav, setNav] = useState(false);
+
   const handleClick = () => setNav(!nav);
+
+  const handleReloadClick = () => {
+    window.location.reload();
+  };
 
   return (
 
     <div className="navbar h-20 fixed top-0 left-0 w-full bg-[#EFE7EB] shadow-md text-gray-800 flex items-center justify-between px-4 z-50">  
       <div>
         <h1 className='flex items-center text-base font-bold ' >
-          <FaDev className='w-[35px] h-[35px] pr-2 text-gray-800'/> 
+          <FaDev className='w-[35px] h-[35px] pr-2 text-gray-800 cursor-pointer' onClick={handleReloadClick}/> 
           Portifolio
         </h1>
       </div>

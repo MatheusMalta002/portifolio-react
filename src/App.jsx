@@ -6,11 +6,11 @@ function App() {
 
 
   return (
-    <div className='min-h-screen w-full flex flex-col items-center justify-center'>
+    <>
       <NavBar />
       <Home />
-      <About />
-    </div>
+      {/* <About /> */}
+    </>
   )
 }
 

@@ -13,9 +13,17 @@ function Navbar(){
     window.location.reload();
   };
 
-  return (
+  const navItems = [
+    { id: 'home', text: 'Home' },
+    { id: 'about', text: 'About' },
+    { id: 'skills', text: 'Skills' },
+    { id: 'work', text: 'Work' },
+    { id: 'contact', text: 'Contact' },
+  ];
 
-    <div className="navbar h-20 fixed top-0 left-0 w-full bg-[#EFE7EB] shadow-md text-gray-800 flex items-center justify-between px-4 z-50">  
+  return (
+    <>
+    <div className="navbar h-[70px] m fixed top-0 left-0 w-full bg-[#EFE7EB] shadow-md text-gray-800 flex items-center justify-between px-4 z-50">  
       <div>
         <h1 className='flex items-center text-base font-bold ' >
           <FaDev className='w-[35px] h-[35px] pr-2 text-gray-800 cursor-pointer' onClick={handleReloadClick}/> 
@@ -25,57 +33,23 @@ function Navbar(){
 
       {/* menu */}
       <ul className='hidden md:flex'>
-        <li className='list_NavBar'>
-          <Link to='home' smooth={true} duration={500}>Home</Link>
-        </li>
-        <li className='list_NavBar'>
-          <Link to='about' smooth={true} duration={500}>About</Link>
-        </li>
-        <li className='list_NavBar'>
-          <Link to='skills' smooth={true} duration={500}>Skills</Link>
-        </li>
-        <li className='list_NavBar'>
-          <Link to='work' smooth={true} duration={500}>Work</Link>
-        </li>
-        <li className='list_NavBar'>
-          <Link to='contact' smooth={true} duration={500}>Contact</Link>
-        </li>
+      {navItems.map(item => (<li className='list_NavBar sm:text-sm md:text-base font-medium' key={item.id}><Link to={item.id} smooth={true} duration={500}>{item.text}</Link></li>))}
       </ul>
 
       {/* Hamburger */}
-      <div onClick={handleClick} className='md:hidden z-10 text-gray-800 cursor-pointer text-2xl'>
-        {!nav ? <FaBars /> : <FaTimes />}
-      </div>
+      <div onClick={handleClick} className='md:hidden z-10 text-gray-800 cursor-pointer text-2xl'>{!nav ? <FaBars /> : <FaTimes />}</div>
 
       {/* Mobile menu */}
-      <ul
-        className={
-          !nav ? 
-          'hidden'
-          : 
-          'absolute top-0 left-0 w-full h-screen bg-[#EFE7EB] flex flex-col justify-center items-center'
-        }
-      >
-        <li className='py-3 hover:border-b border-gray-600 mx-0'>
-          <Link onClick={handleClick} to='home' smooth={true} duration={500}>Home</Link>
-        </li>
-        <li className='py-3 hover:border-b border-gray-600 mx-0'>
-          {' '} <Link onClick={handleClick} to='about' smooth={true} duration={500}>About</Link>
-        </li>
-        <li className='py-3 hover:border-b border-gray-600 mx-0'>
-          {' '}<Link onClick={handleClick} to='skills' smooth={true} duration={500}>Skills</Link>
-        </li>
-        <li className='py-3 hover:border-b border-gray-600 mx-0'>
-          {' '}<Link onClick={handleClick} to='work' smooth={true} duration={500}>Work</Link>
-        </li>
-        <li className='py-3 hover:border-b border-gray-600 mx-0'>
-          {' '}<Link onClick={handleClick} to='contact' smooth={true} duration={500}>Contact</Link>
-        </li>
+      <ul className={ (!nav) ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#EFE7EB] flex flex-col justify-center items-center md:hidden'}>
+        
+      {navItems.map(item => (
+      <li className='py-5 hover:border-b text-3xl border-gray-800 mx-0'key={item.id}>
+        <Link onClick={handleClick} to={item.id} smooth={true} duration={500}>{item.text}</Link>
+      </li>))}
       </ul>
     </div>
+    </>
   );
 };
 
 export default Navbar;
-
-

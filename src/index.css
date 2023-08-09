@@ -16,7 +16,7 @@ html {
     li {
         @apply px-2;
         @apply cursor-pointer;
-        @apply ml-10 text-xs uppercase font-bold text-gray-800 
+        @apply ml-10 text-xs uppercase text-gray-800 
     }
 
     h1{
@@ -32,7 +32,7 @@ html {
     }
 
     .list_NavBar{
-      @apply hover:border-b border-gray-600 pb-2
+      @apply hover:border-b border-gray-800 pb-2
     }
 
 }

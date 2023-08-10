@@ -2,10 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner&display=swap');
+
 html {
   scroll-behavior: smooth;
   font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 
       Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      
 }
 
 
@@ -16,23 +20,28 @@ html {
     li {
         @apply px-2;
         @apply cursor-pointer;
-        @apply ml-10 text-xs uppercase text-gray-800 
+        @apply ml-10 text-xs  text-gray-800 
     }
 
     h1{
-      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 
-      Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      /* @apply font-family: 'Preahvihear', sans-serif; */
     }
 
     .btn_Contact{
-      @apply relative -top-1 -left-1 bg-gray-800 py-2.5 px-5 uppercase text-white
+      @apply relative -top-1 -left-1 bg-gray-800 py-2.5 px-5  text-white
       transition-all before:absolute before:top-1 before:left-1 before:-z-[1] before:h-full
       before:w-full before:border-2 before:border-gray-700 before:transition-all before:content-['']
       hover:top-0 hover:left-0 before:hover:top-0 before:hover:left-0
     }
 
     .list_NavBar{
-      @apply hover:border-b border-gray-800 pb-2
+      @apply hover:border-b border-gray-800 
+    }
+
+    .font-custom {
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-weight: bold;
+      
     }
 
 }

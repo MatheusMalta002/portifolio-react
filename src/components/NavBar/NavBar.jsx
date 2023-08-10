@@ -23,24 +23,24 @@ function Navbar(){
 
   return (
     <>
-    <div className="navbar h-[70px] m fixed top-0 left-0 w-full bg-[#EFE7EB] shadow-md text-gray-800 flex items-center justify-between px-4 z-50">  
+    <div className="navbar h-[70px] m fixed top-0 left-0 w-full bg-[#EFE7EB] shadow-md text-gray-800 flex items-center justify-between px-4 z-50 ">  
       <div>
-        <h1 className='flex items-center text-base font-bold ' >
+        <h1 className='flex items-center text-base font-bold  ' >
           <FaDev className='w-[35px] h-[35px] pr-2 text-gray-800 cursor-pointer' onClick={handleReloadClick}/> 
-          Portifolio
+          <span className='font-custom'>Portifolio</span>
         </h1>
       </div>
 
       {/* menu */}
       <ul className='hidden md:flex'>
-      {navItems.map(item => (<li className='list_NavBar sm:text-sm md:text-base font-medium' key={item.id}><Link to={item.id} smooth={true} duration={500}>{item.text}</Link></li>))}
+      {navItems.map(item => (<li className='list_NavBar sm:text-sm md:text-base font-custom' key={item.id}><Link to={item.id} smooth={true} duration={500}>{item.text}</Link></li>))}
       </ul>
 
       {/* Hamburger */}
       <div onClick={handleClick} className='md:hidden z-10 text-gray-800 cursor-pointer text-2xl'>{!nav ? <FaBars /> : <FaTimes />}</div>
 
       {/* Mobile menu */}
-      <ul className={ (!nav) ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#EFE7EB] flex flex-col justify-center items-center md:hidden'}>
+      <ul className={ (!nav) ? 'hidden' : 'absolute top-0 left-0 w-full font-custom h-screen bg-[#EFE7EB] flex flex-col justify-center items-center md:hidden'}>
         
       {navItems.map(item => (
       <li className='py-5 hover:border-b text-3xl border-gray-800 mx-0'key={item.id}>

@@ -37,13 +37,13 @@ function Navbar(){
       </ul>
 
       {/* Hamburger */}
-      <div onClick={handleClick} className='md:hidden z-10 text-gray-800 cursor-pointer text-2xl'>{!nav ? <FaBars /> : <FaTimes />}</div>
+      <div onClick={handleClick} className='md:hidden z-10  cursor-pointer text-2xl'>{!nav ? <FaBars className='text-gray-800 ' /> : <FaTimes className='text-[#EFE7EB]' />}</div>
 
       {/* Mobile menu */}
-      <ul className={ (!nav) ? 'hidden' : 'absolute top-0 left-0 w-full font-custom h-screen bg-[#EFE7EB] flex flex-col justify-center items-center md:hidden'}>
+      <ul className={ (!nav) ? 'hidden' : 'absolute top-0 right-0 w-[65%] font-custom h-screen bg-gray-800  flex flex-col justify-center items-center md:hidden'}>
         
       {navItems.map(item => (
-      <li className='py-5 hover:border-b text-3xl border-gray-800 mx-0'key={item.id}>
+      <li className='py-5 hover:border-b text-[15px] text-[#EFE7EB] border-[#EFE7EB] mx-0'key={item.id}>
         <Link onClick={handleClick} to={item.id} smooth={true} duration={500}>{item.text}</Link>
       </li>))}
       </ul>

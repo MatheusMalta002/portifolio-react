@@ -4,12 +4,11 @@ import { About } from './components/About/About.jsx'
 
 function App() {
 
-
   return (
     <>
       <NavBar />
       <Home />
-      {/* <About /> */}
+      <About />
     </>
   )
 }

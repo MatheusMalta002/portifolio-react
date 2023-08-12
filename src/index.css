@@ -10,12 +10,14 @@ html {
 
 @layer base {
   body {
-    @apply bg-[#EFE7EB]  tracking-wide min-h-full overflow-x-hidden
+    @apply bg-[#EFE7EB]  tracking-wide min-h-full overflow-x-hidden 
   }
+
+
     li {
         @apply px-2;
         @apply cursor-pointer;
-        @apply ml-10 text-xs  text-gray-800 
+        @apply ml-5 text-xs  text-gray-800 
     }
 
     .btn_Contact{
@@ -33,5 +35,4 @@ html {
       font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
       font-weight: bold;
     }
-
 }

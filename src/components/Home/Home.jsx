@@ -9,7 +9,7 @@ function Home() {
 
     return (
         <>
-        <section className='min-w-screen min-h-screen flex flex-col justify-center items-center border-2 px-[50px] sm:px-[300px] xs:px-[200px]'>
+        <section className='min-w-screen min-h-screen flex flex-col justify-center items-center  px-[50px] sm:px-[300px] xs:px-[200px] '>
             {/* Social Icons */}
             <Social_Icons />
             {/* main container */}
@@ -43,21 +43,19 @@ function Home() {
                         </p>
                         <button className='btn_Contact ml-[3px]'>
                             Contact me
-                        </button>         
+                        </button>       
                     </div>
-
                     {/* IMAGEM */}
                     <div className='h-full w-full flex items-center justify-center md:ml-10 xs:ml-0'> 
                         <div className=' md:w-[220px] md:h-[220px] sm:w-[200px] sm:h-[200px] xs:w-[180px] xs:h-[180px] rounded-full overflow-hidden transition-all duration-500'>
-                            <img src={image} alt="photo" className='object-cover w-full h-full rounded-full bg-[#9296d3]' />
+                            <img src={image} alt="photo" id='photo' className='object-cover w-full h-full rounded-full bg-[#9296d3]' />
                         </div>
                     </div>  
                 </div>
                 <div className='flex justify-center items-end w-full md:text-4xl sm:text-3xl xs:text-3xl h-[130px]'>
                     <CiCircleChevDown className=' animate-bounce'/>
                 </div>
-            </motion.div>
-           
+            </motion.div>      
         </section>
         </>
     )

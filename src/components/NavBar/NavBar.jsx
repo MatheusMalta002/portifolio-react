@@ -19,10 +19,10 @@ function Navbar(){
   return (
     <>
     <ScrollIndicator/>
-    <header id='navbar' className='h-[70px] fixed top-0 left-0 w-full shadow-md text-gray-800 flex items-center justify-between px-4 z-50 backdrop-blur-[10px] bg-[#ffffff33]'>  
+    <header id='navbar' className='h-[70px] fixed top-0 left-0 w-full shadow-md text-[#2c2b2c] flex items-center justify-between px-4 z-50 backdrop-blur-[10px] bg-[#ffffff33]'>  
       <div>
         <h1 className='flex items-center text-base font-bold  ' >
-          <FaDev className='w-[35px] h-[35px] pr-2 text-gray-800 cursor-pointer' onClick={handleReloadClick}/> 
+          <FaDev className='w-[35px] h-[35px] pr-2 text-[#2c2b2c] cursor-pointer' onClick={handleReloadClick}/> 
           <span className='font-custom'>Portifolio</span>
         </h1>
       </div>

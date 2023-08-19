@@ -5,7 +5,6 @@
 
 html {
   scroll-behavior: smooth;
-      
 }
 
 @layer base {
@@ -21,9 +20,9 @@ html {
     }
 
     .btn_Contact{
-      @apply relative -top-1 -left-1 bg-gray-800 py-2.5 px-5  text-white
+      @apply relative -top-1 -left-1 bg-[#9894cc] py-2.5 px-5  text-[#EFE7EB]
       transition-all before:absolute before:top-1 before:left-1 before:-z-[1] before:h-full
-      before:w-full before:border-2 before:border-gray-700 before:transition-all before:content-['']
+      before:w-full before:border-2 before:border-[#9894cc] before:transition-all before:content-['']
       hover:top-0 hover:left-0 before:hover:top-0 before:hover:left-0
     }
 

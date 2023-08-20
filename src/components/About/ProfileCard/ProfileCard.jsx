@@ -1,6 +1,6 @@
 import React from 'react'
 import photo from '../../../assets/photo_profile.png'
-import { IoLogoInstagram, IoLogoWhatsapp, IoLogoFacebook } from 'react-icons/io'
+import { IoLogoGithub, IoLogoWhatsapp, IoLogoLinkedin} from 'react-icons/io'
 
 export const ProfileCard = () => {
 
@@ -18,14 +18,14 @@ export const ProfileCard = () => {
         <h2 class="font-semibold">Matheus Malta</h2>
         <p class="text-gray-500">Developer</p>
       </div>
-      <ul class="py-4 mt-2 text-gray-700 flex items-center justify-around">
-        <li class="flex flex-col items-center justify-around">
-          <IoLogoInstagram className='text-[#b439a4] w-[30px] h-[30px]' />
+      <ul class="py-4 mt-2 text-gray-700 flex items-center justify-evenly">
+        <li class="flex flex-col items-center justify-around px-0 ml-0">
+          <IoLogoGithub className='text-[#4d464c] w-[30px] h-[30px]' />
         </li>
-        <li class="flex flex-col items-center justify-between">
-          <IoLogoFacebook className='text-[#385bb9] w-[30px] h-[30px]' />
+        <li class="flex flex-col items-center justify-between px-0 ml-0">
+          <IoLogoLinkedin className='text-[#385bb9] w-[30px] h-[30px]' />
         </li>
-        <li class="flex flex-col items-center justify-around">
+        <li class="flex flex-col items-center justify-around px-0 ml-0">
           <a href={linkZap}><IoLogoWhatsapp className='text-[#6cdd50] w-[30px] h-[30px]' /></a>
         </li>
       </ul>

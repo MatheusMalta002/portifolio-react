@@ -7,7 +7,7 @@ export const ProfileCard = () => {
   const linkZap = 'https://api.whatsapp.com/send?phone=5581989054991&text=Ol%C3%A1%20Matheus,%20Bom%20dia!'
 
   return (
-    <div class=" w-full  shadow-xl rounded-lg text-[#2c2b2c] ">
+    <div class=" w-full shadow-xl rounded-lg text-[#2c2b2c] ">
       <div class="rounded-t-lg h-32 overflow-hidden ">
         <img class="object-cover object-top w-full" src='https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ' alt='Mountain'/>
       </div>
@@ -20,18 +20,19 @@ export const ProfileCard = () => {
       </div>
       <ul class="py-4 mt-2 text-gray-700 flex items-center justify-evenly">
         <li class="flex flex-col items-center justify-around px-0 ml-0">
-          <IoLogoGithub className='text-[#4d464c] w-[30px] h-[30px]' />
+          <IoLogoGithub className='text-[#4d464c] w-[35px] h-[35px]' />
         </li>
         <li class="flex flex-col items-center justify-between px-0 ml-0">
-          <IoLogoLinkedin className='text-[#385bb9] w-[30px] h-[30px]' />
+          <IoLogoLinkedin className='text-[#385bb9] w-[35px] h-[35px]' />
         </li>
         <li class="flex flex-col items-center justify-around px-0 ml-0">
-          <a href={linkZap}><IoLogoWhatsapp className='text-[#6cdd50] w-[30px] h-[30px]' /></a>
+          <a href={linkZap}><IoLogoWhatsapp className='text-[#6cdd50] w-[35px] h-[35px]' /></a>
         </li>
       </ul>
       <div class="p-4 border-t mx-8 mt-2">
         <div className=' flex items-center justify-center'>
-          <button className='rounded-[10px] bg-[#8685d4] p-[10px] hover:scale-105 ease-in duration-300 font-medium text-[#EFE7EB]'>
+          <button className='rounded-[10px] bg-[#8685d4] p-[10px] hover:scale-105 ease-in duration-300 
+          font-medium text-[#EFE7EB] md:w-auto sm:w-auto xs:w-full'>
             Download CV
           </button>
         </div>

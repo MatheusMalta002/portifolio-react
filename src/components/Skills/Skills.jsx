@@ -17,16 +17,16 @@ const Skills = () => {
 
     return (
         <div name='skills' className='w-full  xl:px-[180px] md:px-[150px] sm:px-[100px] xs:px-[50px] 
-        flex justify-center items-center md:pt-10 sm:pt-5 xs>pt-0'>
+        flex justify-center items-center md:py-10 sm:py-5 xs:py-2'>
             {/* Container */}
             <div className='mx-auto flex flex-col justify-center w-full h-full'>
                 <div  data-aos="zoom-out-down" data-aos-duration="1000">
-                    <p className='text-2xl font-bold inline border-b-2 text-[#2c2b2c] border-[#8685d4] font-custom ' >Skills</p>
+                    <p className='text-2xl font-bold inline border-b-2 text-[#2c2b2c]  font-custom ' >Skills</p>
                 </div>
 
                 <div className='w-full h-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-6'>
                     {navItems.map((item, index) => (
-                        <div data-aos="zoom-out-down" data-aos-duration="1000">
+                        <div data-aos="zoom-out-down" data-aos-duration="800">
                         <div key={index} className='shadow-md py-2 cursor-pointer shadow-[#313030]  hover:scale-110 duration-500 rounded-[10px] flex flex-col justify-around'   >
                             <img className='w-20 mx-auto' src={`https://skillicons.dev/icons?i=${item.name}`} alt={`${item.name} icon`}/>
                             <p className='font-medium'>{item.text}</p>

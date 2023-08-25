@@ -23,12 +23,12 @@ function Navbar(){
       <div>
         <h1 className='flex items-center text-base font-bold  ' >
           <FaDev className='w-[35px] h-[35px] pr-2 text-[#2c2b2c] cursor-pointer' onClick={handleReloadClick}/> 
-          <span className='font-custom'>Portifolio</span>
+          <span className='font-custom font-bold'>Portifolio</span>
         </h1>
       </div>
       {/* menu */}
         <ul className='hidden md:flex'>
-          {navItems.map(item => (<li className='list_NavBar sm:text-sm md:text-base font-custom' key={item.id}><Link to={item.id} smooth={true} duration={500}>{item.text}</Link></li>))}
+          {navItems.map(item => (<li className='list_NavBar sm:text-sm md:text-base font-bold font-custom' key={item.id}><Link to={item.id} smooth={true} duration={500}>{item.text}</Link></li>))}
         </ul>
       {/* Hamburger */}
       <div onClick={handleClick} className='md:hidden z-10  cursor-pointer text-2xl'>{!nav ? <FaBars className='text-gray-800 ' /> : <FaTimes className='text-[#EFE7EB]' />}</div>

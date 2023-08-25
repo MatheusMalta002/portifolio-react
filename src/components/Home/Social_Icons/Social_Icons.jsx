@@ -6,7 +6,8 @@ function Social_Icons() {
   return (
         <div className='hidden lg:flex fixed flex-col top-[35%] left-0 '>
             <ul>
-            <li className='w-[160px] h-[50px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600'>
+            <li className='w-[160px] h-[50px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] 
+            duration-300 bg-blue-600 rounded-tr-[5px] hover:rounded-br-[5px]'>
               <a
                 className='flex justify-between items-center w-full text-gray-300 pl-2'
                 href='/'
@@ -14,7 +15,8 @@ function Social_Icons() {
                 Linkedin <FaLinkedin size={30} />
               </a>
             </li>
-            <li className='w-[160px] h-[50px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]'>
+            <li className='w-[160px] h-[50px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] 
+            hover:rounded-br-[5px] hover:rounded-tr-[5px] duration-300 bg-[#333333]'>
               <a
                 className='flex justify-between items-center w-full text-gray-300 pl-2'
                 href='/'
@@ -22,7 +24,8 @@ function Social_Icons() {
                 Github <FaGithub size={30} />
               </a>
             </li>
-            <li className='w-[160px] h-[50px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]'>
+            <li className='w-[160px] h-[50px] flex justify-between items-center ml-[-100px] hover:ml-[-10px]
+            hover:rounded-br-[5px] hover:rounded-tr-[5px] duration-300 bg-[#6fc2b0]'>
               <a
                 className='flex justify-between items-center w-full text-gray-300 pl-2'
                 href='/'
@@ -30,7 +33,8 @@ function Social_Icons() {
                 Email <HiOutlineMail size={30} />
               </a>
             </li>
-            <li className='w-[160px] h-[50px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]'>
+            <li className='w-[160px] h-[50px] flex justify-between items-center ml-[-100px] hover:ml-[-10px]
+             duration-300 bg-[#565f69] rounded-br-[5px] hover:rounded-tr-[5px]'>
               <a
                 className='flex justify-between items-center w-full text-gray-300 pl-2'
                 href='/'

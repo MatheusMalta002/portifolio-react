@@ -17,14 +17,14 @@ const Skills = () => {
 
     return (
         <div name='skills' className='w-full  xl:px-[180px] md:px-[150px] sm:px-[100px] xs:px-[50px] 
-        flex justify-center items-center md:py-10 sm:py-5 xs:py-2'>
+        flex justify-center items-center pt-20'>
             {/* Container */}
             <div className='mx-auto flex flex-col justify-center w-full h-full'>
-                <div  data-aos="zoom-out-down" data-aos-duration="1000">
-                    <p className='text-2xl font-bold inline border-b-2 text-[#2c2b2c]  font-custom ' >Skills</p>
+                <div >
+                    <p className='text-3xl font-bold inline border-b-2 text-[#2c2b2c]  font-custom ' >Habilidades</p>
                 </div>
 
-                <div className='w-full h-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-6'>
+                <div className='w-full h-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-10'>
                     {navItems.map((item, index) => (
                         <div data-aos="zoom-out-down" data-aos-duration="800">
                         <div key={index} className='shadow-md py-2 cursor-pointer shadow-[#313030]  hover:scale-110 duration-500 rounded-[10px] flex flex-col justify-around'   >

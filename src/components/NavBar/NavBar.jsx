@@ -11,9 +11,9 @@ function Navbar(){
   const handleReloadClick = () =>  window.location.reload();
 
   const navItems = [
-    { id: 'home', text: 'Home' },{ id: 'about', text: 'About' },
-    { id: 'skills', text: 'Skills' },{ id: 'work', text: 'Work' },
-    { id: 'contact', text: 'Contact' },
+    { id: 'home', text: 'Início' },{ id: 'about', text: 'Sobre' },
+    { id: 'skills', text: 'Habilidades' },{ id: 'work', text: 'Projetos' },
+    { id: 'contact', text: 'Contatos' },
   ];
 
   return (

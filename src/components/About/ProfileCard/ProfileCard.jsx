@@ -16,7 +16,7 @@ export const ProfileCard = () => {
       </div>
       <div class="text-center mt-2">
         <h2 class="font-semibold">Matheus Malta</h2>
-        <p class="text-gray-500">Developer</p>
+        <p class="text-gray-500">Desenvolvedor</p>
       </div>
       <ul class="py-4 mt-2 text-gray-700 flex items-center justify-evenly">
         <li class="flex flex-col items-center justify-around px-0 ml-0">
@@ -33,7 +33,7 @@ export const ProfileCard = () => {
         <div className=' flex items-center justify-center'>
           <button className='rounded-[10px] bg-[#8685d4] p-[10px] hover:scale-105 ease-in duration-300 
           font-medium text-[#EFE7EB] md:w-auto sm:w-auto xs:w-full'>
-            Download CV
+            Baixar Currículo
           </button>
         </div>
       </div>

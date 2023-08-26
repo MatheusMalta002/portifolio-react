@@ -12,30 +12,29 @@ const About = () => {
   }, []);
 
   return (
-    <div id='about' className='w-full p-4 flex items-center justify-center py-16 xl:px-[180px] md:px-[150px] sm:px-[100px] 
+    <div id='about' className='w-full flex items-center justify-center md:py-16 sm:py-14 xs:py-7 xl:px-[180px] md:px-[150px] sm:px-[100px] 
     xs:px-[50px] font-custom '>
       <div className='max-w-[1240px] m-auto grid xl:grid-cols-3 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 xl:gap-8 md:gap-0 md:pt-[50px] 
       sm:pt-[20px] xs:pt-[10px]' >
-        <div className='col-span-2' data-aos="fade-right" data-aos-offset="100"
-           data-aos-easing="ease-in-sine" data-aos-duration="600">  
-          <p className=' text-2xl tracking-widest text-[#8685d4] font-bold font-custom'>
-            About
+        <div className='col-span-2'>  
+          <p className=' text-3xl tracking-widest text-[#8685d4] font-bold font-custom'>
+            Sobre
           </p>
-          <h2 className='py-4 font-bold text-[#2c2b2c] md:text-[17px] '>Who I Am</h2>
-          <p className='py-2 text-[#2c2b2c] md:text-[17px]  text-justify' >
-            I am a student of Information Systems at the Center for Informatics of the Federal University of Pernambuco, 
-            currently in the final stages of my 4th semester. I reside in Recife-PE, and invest my time in studying various
-             technologies to enhance my technical skills and not confine myself solely to the knowledge provided by the university.
+          <h2 className='py-4 font-bold text-[#2c2b2c] md:text-[17px]  '>Quem eu sou</h2>
+          <p className='py-2 text-[#2c2b2c] md:text-[17px] xs:text-[16px]  text-justify' >
+            Sou estudante de Sistemas de Informação no Centro de Informática da Universidade Federal de Pernambuco,
+            atualmente na fase final do meu 4º semestre. Moro em Recife-PE e invisto meu tempo estudando diversas
+            tecnologias para aprimorar minhas habilidades técnicas e não me limitar apenas aos conhecimentos proporcionados pela universidade.
           </p>
-          <p className='py-2 text-[#2c2b2c] md:text-[17px]  text-justify' >
-            I possess an understanding of the principles of Algorithms and Data Structures, Object-Oriented Programming,
-            Computer Networks, and Database Systems. Additionally, I am dedicated to the study of practices such as clean
-            code, BDD, TDD, and automated testing. I have a comprehensive command of the Javascript and Python programming 
-            languages. Apart from these, I have other skills that can be reviewed in the <span className='underline cursor-pointer'><Link to='skills'>skills section.</Link></span>
+          <p className='py-2 text-[#2c2b2c] md:text-[17px] xs:text-[16px] text-justify' >
+            Possuo compreensão dos princípios de Algoritmos e Estruturas de Dados, Programação Orientada a Objetos,
+             Redes de Computadores e Banco de Dados. Além disso, me dedico ao estudo de práticas como clean
+             code, BDD, TDD e testes automatizados. Tenho domínio sobre as linguagens de programação Javascript e Python.
+             Além dessas, possuo habilidades com outras tecnologias que podem ser revisadas na <span className='underline cursor-pointer'><Link to='skills'>seção de habilidades.</Link></span>
           </p>
         </div>
         <div className='w-full h-auto m-auto shadow-xl shadow-gray-400  rounded-xl flex items-center
-         justify-center p-4 md:mt-0 sm:mt-0 xs:mt-[30px]' data-aos="zoom-in-left" data-aos-duration="700">
+         justify-center p-4 md:mt-0 sm:mt-0 xs:mt-[30px]'>
           <ProfileCard />
         </div>
       </div>

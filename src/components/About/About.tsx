@@ -1,11 +1,10 @@
+import React, { useEffect } from 'react';
 import { Link } from 'react-scroll';
 import { ProfileCard } from './ProfileCard/ProfileCard';
 import AOS from 'aos';
-import { useEffect } from 'react';
 import 'aos/dist/aos.css';
 
-
-const About = () => {
+const About: React.FC = () => {
 
   useEffect(() => {
     AOS.init();

@@ -1,32 +1,27 @@
-import React from 'react'
-import Social_Icons from './Social_Icons/Social_Icons'
-import Typewriter from 'typewriter-effect'
-import image from '../../assets/photo_profile.png'
-import { IoIosArrowDown } from 'react-icons/io'
+import React, { useEffect } from 'react';
+import Social_Icons from './Social_Icons/Social_Icons';
+import Typewriter from 'typewriter-effect';
+import { IoIosArrowDown } from 'react-icons/io';
 import AOS from 'aos';
-import { useEffect } from 'react';
 import 'aos/dist/aos.css';
+import image from '../../assets/photo_profile.png';
 
-function Home() {
-
+const Home: React.FC = () => {
     useEffect(() => {
         AOS.init();
-      }, []);
+    }, []);
 
     return (
-        <>
         <section id='home' className='min-w-screen min-h-screen flex flex-col justify-center items-center  md:px-[350px] sm:px-[300px] xs:px-[200px] '>
             {/* Social Icons */}
             <Social_Icons />
             {/* main container */}
             <div className='w-full h-[75px]'></div>
             <div className='flex  justify-center items-center flex-col   md:pb-10  xs:pb-0 flex-shrink-0' >
-               
                 <div className='md:flex justify-center w-full py-10 sm:hidden xs:hidden'></div>
                 <div className='flex md:flex-row sm:flex-col-reverse xs:flex-col-reverse'>
                     <div className='flex font-custom flex-col items-start justify-center text-[#2c2c2b] xs:mt-3 sm:mt-14 md:mt-0' data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-duration="1100">
-                        <h1 className='flex 2xl:text-7xl xl:text-6xl md:text-5xl sm:text-5xl xs:text-[40px] transition-all duration-500 
-                        whitespace-nowrap md:mb-5 sm:mb-4 xs:mb-6 font-bold'>
+                        <h1 className='flex 2xl:text-7xl xl:text-6xl md:text-5xl sm:text-5xl xs:text-[40px] transition-all duration-500 whitespace-nowrap md:mb-5 sm:mb-4 xs:mb-6 font-bold'>
                             Matheus Malta
                         </h1>
                         <h1 className=' xs:text-2xl sm:text-4xl md:text-4xl  transition-all duration-500 whitespace-nowrap flex  xs:mb-3 sm:mb-3 md:mb-2'>
@@ -68,12 +63,10 @@ function Home() {
                     <IoIosArrowDown className=' animate-bounce text-[15px] '/>
                     </div>
                     </div>
-                    
                 </div>
             </div>      
         </section>
-        </>
-    )
+    );
 }
 
-export default Home
+export default Home;

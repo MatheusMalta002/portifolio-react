@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import { FaBars, FaDev, FaTimes } from 'react-icons/fa';
 import { ScrollIndicator } from './ScrollIndicator/ScrollIndicator';
+import { useTheme } from '../../hooks/useTheme';
+import ChangeTheme from './ChangeTheme/ChangeTheme';
 
 interface NavItem {
   id: string;
@@ -23,48 +25,58 @@ const Navbar: React.FC = () => {
     { id: 'contact', text: 'Contatos' },
   ];
 
+  const { theme, setTheme} = useTheme()
+
   return (
     <>
       <ScrollIndicator />
       <header
         id='navbar'
-        className='h-[70px] fixed top-0 left-0 w-full shadow-md text-[#2c2b2c] flex items-center justify-between px-4 z-50 backdrop-blur-[10px] bg-[#ffffff33]'
+        className={`h-[70px] fixed top-0 left-0 w-full shadow-md flex items-center justify-between px-4 z-50 backdrop-blur-[10px]
+        ${theme === "light" ? ' text-light-secondary' : ' text-dark-secondary'}`}
       >
         <div>
           <h1 className='flex items-center text-base font-bold'>
             <FaDev
-              className='w-[35px] h-[35px] pr-2 text-[#2c2b2c] cursor-pointer'
+              className={`w-[35px] h-[35px] pr-2 text-[#2c2b2c] cursor-pointer
+              ${theme === "light" ? ' text-light-textNavbar' : ' text-dark-textNavbar'}`}
               onClick={handleReloadClick}
             />
             <span className='font-custom font-bold'>Portifolio</span>
           </h1>
         </div>
         {/* menu */}
-        <ul className='hidden md:flex'>
+        <div className='flex justify-center items-center h-full'>
+        <ul className='hidden md:flex h-full items-center mr-[20px]'>
           {navItems.map((item) => (
             <li
-              className='list_NavBar sm:text-sm md:text-base font-bold font-custom'
+              className='list_NavBar sm:text-sm md:text-base font-bold font-custom '
               key={item.id}
             >
               <Link to={item.id} smooth={true} duration={500}>
-                {item.text}
+                <p className={`${theme === 'light' ? "hover:border-b border-light-secondary": "hover:border-b border-dark-secondary"}`}>{item.text}</p>
               </Link>
             </li>
           ))}
         </ul>
+        <ChangeTheme/>
+        
         {/* Hamburger */}
         <div
           onClick={handleClick}
-          className='md:hidden z-10  cursor-pointer text-2xl'
+          className={`md:hidden z-10  cursor-pointer text-2xl ml-[20px]
+          ${theme === "light" ? "text-light-secondary" : "text-dark-secondary"}`}
+  
         >
-          {!nav ? <FaBars className='text-gray-800 ' /> : <FaTimes className='text-[#EFE7EB]' />}
+          {!nav ? <FaBars className=' ' /> : <FaTimes className='' />}
+        </div>
         </div>
         {/* Mobile menu */}
         <ul
           className={
             !nav
               ? 'hidden'
-              : 'absolute top-0 right-0 w-[65%] font-custom h-[100vh] bg-gray-800  flex flex-col justify-center items-center md:hidden'
+              : 'absolute top-0 right-0 w-[65%] font-custom h-[100vh] bg-[#362f2f] flex flex-col justify-center items-center md:hidden'
           }
         >
           {navItems.map((item) => (

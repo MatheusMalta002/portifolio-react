@@ -9,9 +9,9 @@ function ChangeTheme() {
   return (
     <div>
       {theme === "light" ? (
-        <FaSun onClick={() => { setTheme("dark"); }} />
+        <FaSun className="cursor-pointer"onClick={() => { setTheme("dark"); }} />
       ) : (
-        <FaMoon className={`${theme === "dark" ? "text-gray-400": null}`} onClick={() => { setTheme("light"); }} />
+        <FaMoon className={`cursor-pointer ${theme === "dark" ? "text-white": null}`} onClick={() => { setTheme("light"); }} />
       )}
     </div>
   );

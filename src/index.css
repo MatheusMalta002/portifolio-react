@@ -25,15 +25,10 @@ html {
     background-size: cover;
     background-position: center;
     height: 350px;
+    width: 330px;
 }
 
-.content-div:hover {
-    background-image: linear-gradient(
-        to right,
-        rgba(112, 157, 255, 0.8),
-        hsla(242, 77%, 75%, 0.8)   
-    )!important;
-}
+
 
 @layer base {
   body {

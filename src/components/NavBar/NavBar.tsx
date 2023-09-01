@@ -4,6 +4,9 @@ import { FaBars, FaDev, FaTimes } from 'react-icons/fa';
 import { ScrollIndicator } from './ScrollIndicator/ScrollIndicator';
 import { useTheme } from '../../hooks/useTheme';
 import ChangeTheme from './ChangeTheme/ChangeTheme';
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 interface NavItem {
   id: string;
@@ -27,6 +30,10 @@ const Navbar: React.FC = () => {
 
   const { theme, setTheme} = useTheme()
 
+  useEffect(() => {
+    AOS.init();
+}, []);
+
   return (
     <>
       <ScrollIndicator />
@@ -36,7 +43,7 @@ const Navbar: React.FC = () => {
         ${theme === "light" ? ' text-light-secondary' : ' text-dark-secondary'}`}
       >
         <div>
-          <h1 className='flex items-center text-base font-bold'>
+          <h1 className='flex items-center text-base font-bold' data-aos="fade-down" data-aos-duration='900'>
             <FaDev
               className={`w-[35px] h-[35px] pr-2 text-[#2c2b2c] cursor-pointer
               ${theme === "light" ? ' text-light-textNavbar' : ' text-dark-textNavbar'}`}
@@ -48,10 +55,12 @@ const Navbar: React.FC = () => {
         {/* menu */}
         <div className='flex justify-center items-center h-full'>
         <ul className='hidden md:flex h-full items-center mr-[20px]'>
-          {navItems.map((item) => (
+          {navItems.map((item, idx) => (
             <li
               className='list_NavBar sm:text-sm md:text-base font-bold font-custom '
               key={item.id}
+              data-aos="fade-down"
+              data-aos-duration={`${idx+10}00`}
             >
               <Link to={item.id} smooth={true} duration={500}>
                 <p className={`${theme === 'light' ? "hover:border-b border-light-secondary": "hover:border-b border-dark-secondary"}`}>{item.text}</p>

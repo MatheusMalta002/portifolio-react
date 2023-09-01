@@ -19,7 +19,8 @@ const config: Config = {
           secondary: "#362f2f",
           textNavbar: "#362f2f",
           image: "#362f2f",
-          typewriter: "#362f2f"
+          typewriter: "#362f2f",
+          iconsBg: "#131213"
           // outras cores do modo claro
         },
         dark: {
@@ -27,7 +28,8 @@ const config: Config = {
           secondary: "#ffffff",
           textNavbar: "#11f389",
           image: "#11f389",
-          typewriter: "#11f389"
+          typewriter: "#11f389",
+          iconsBg: "#131213"
 
           // outras cores do modo escuro
         },

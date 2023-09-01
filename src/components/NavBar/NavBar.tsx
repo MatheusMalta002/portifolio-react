@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
           ${theme === "light" ? "text-light-secondary" : "text-dark-secondary"}`}
   
         >
-          {!nav ? <FaBars className=' ' /> : <FaTimes className='' />}
+          {!nav ? <FaBars className=' ' /> : <FaTimes className='text-dark-secondary' />}
         </div>
         </div>
         {/* Mobile menu */}

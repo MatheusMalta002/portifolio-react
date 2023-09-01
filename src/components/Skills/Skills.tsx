@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useTheme } from '../../hooks/useTheme';
 
 interface SkillItem {
   name: string;
@@ -27,19 +28,23 @@ const Skills: React.FC = () => {
     AOS.init();
   }, []);
 
+  const { theme, setTheme } = useTheme()
+
   return (
-    <div name='skills' className='w-full xl:px-[180px] md:px-[150px] sm:px-[100px] xs:px-[50px] 
+    <div id='skills' className='w-full xl:px-[180px] md:px-[150px] sm:px-[100px] xs:px-[50px] 
       flex justify-center items-center pt-20'>
       {/* Container */}
       <div className='mx-auto flex flex-col justify-center w-full h-full'>
-        <div>
-          <p className='text-3xl font-bold inline border-b-2 text-[#2c2b2c]  font-custom ' >Habilidades</p>
+        <div className='w-full flex justify-center items-center'>
+          <p className={` text-3xl font-bold inline font-custom
+          ${theme === "light" ? " text-light-secondary": " text-dark-textNavbar"}`} >Habilidades</p>
         </div>
 
         <div className='w-full h-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-10'>
           {navItems.map((item, index) => (
             <div data-aos="zoom-out-down" data-aos-duration="800" key={index}>
-              <div className='shadow-md py-2 cursor-pointer shadow-[#313030]  hover:scale-110 duration-500 rounded-[10px] flex flex-col justify-around'>
+              <div className={`shadow-md py-2 cursor-pointer   hover:scale-110 duration-500 rounded-[10px] flex flex-col justify-around
+              ${theme === "light" ? "text-light-secondary shadow-gray-500 bg-light-primary" : "text-dark-secondary shadow-black bg-[#353534]"}`}>
                 <img className='w-20 mx-auto' src={`https://skillicons.dev/icons?i=${item.name}`} alt={`${item.name} icon`} />
                 <p className='font-medium'>{item.text}</p>
               </div>
